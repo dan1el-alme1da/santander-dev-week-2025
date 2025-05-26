@@ -1,4 +1,4 @@
-package me.challenge.santander.dev.week._5;
+package me.challenge.santander.dev.week;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

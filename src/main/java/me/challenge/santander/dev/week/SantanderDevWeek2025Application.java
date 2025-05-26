@@ -1,4 +1,4 @@
-package me.challenge.santander.dev.week._5;
+package me.challenge.santander.dev.week;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
