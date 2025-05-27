@@ -1,9 +1,18 @@
 package me.challenge.santander.dev.week.domain.model;
 
+import jakarta.persistence.*;
+
+import java.math.BigDecimal;
+
+@Entity(name = "tb_card")
 public class Card {
+    @Id // Confirmar que o ID é um identificador de fato
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // DEFINE UM ID ALEATÓRIO AUTOMÁTICO
     private Long id;
+    @Column(unique = true)// @Column DEFINE CRITÉRIOS DESEJADOS, NESSE CASO É PRA DEIXAR NUMERO DO CARTAO UNICO
     private String number;
-    private Float limit;
+    @Column(name = "available_limit", scale = 13, precision = 2)
+    private BigDecimal limit;
 
     public Long getId() {
         return id;
@@ -21,11 +30,11 @@ public class Card {
         this.number = number;
     }
 
-    public Float getLimit() {
+    public BigDecimal getLimit() {
         return limit;
     }
 
-    public void setLimit(Float limit) {
+    public void setLimit(BigDecimal limit) {
         this.limit = limit;
     }
 }
