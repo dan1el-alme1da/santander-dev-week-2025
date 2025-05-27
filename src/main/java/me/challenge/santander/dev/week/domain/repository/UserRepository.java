@@ -8,4 +8,7 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends JpaRepository<User, Long> {
     // USA GENERICS PARA ESPECIFICAR O PRIMEIRO PARAMETRO (T) = ENTIDADE QUE USAMOS E DEPOIS O TIPO DE ID
     // AGORA QUE ESTAMOS ESTENDENDO jPArEPOSITORY, TEMOS TODAS AS OPERAÇÕES BÁSICAS
+
+    boolean existsByAccountNumber(String accountNumber);
+    //QUERO VALIDAR SE O ACCOUNT NUMBER JA EXISTE
 }
