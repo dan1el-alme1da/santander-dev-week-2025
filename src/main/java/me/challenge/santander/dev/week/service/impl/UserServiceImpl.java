@@ -28,6 +28,6 @@ public class UserServiceImpl implements UserService { // A CLASSE QUE IMPLEMENTA
             throw new IllegalArgumentException("This User Account Number already exists");
             // QUERO QUE AVISE SE O USUARIO JA EXISTE
         }
-        return this.userRepository.save(userToCreate);// NECESSARIO SALVAR O OSSO DADO
+        return this.userRepository.save(userToCreate);// NECESSARIO SALVAR O DADO
     }
 }
